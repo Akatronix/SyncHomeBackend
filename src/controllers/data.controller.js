@@ -20,9 +20,9 @@ async function getAllData(req, res) {
 }
 
 async function createDataSensor(req, res) {
-  const { temp, fan, dayAndNight, flame, period } = req.body;
+  const { temp, fan, dayAndNight, flame } = req.body;
   try {
-    if (!temp || !fan || !dayAndNight || !flame || !period) {
+    if (!temp || !fan || !dayAndNight || !flame) {
       return res.status(400).send({ message: "all field are required! " });
     }
     const newData = await SensorData.create(req.body);
