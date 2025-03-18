@@ -1,10 +1,10 @@
 const SocketData = require("../models/socketControls.model");
 
 async function createNewSoket(req, res) {
-  const { hour, second, mins, current, placeholder, peroid } = req.body;
+  const { hour, second, mins, current, placeholder, period } = req.body;
 
   try {
-    if (!hour || !second || !mins || !current || !placeholder || !peroid) {
+    if (!hour || !second || !mins || !current || !placeholder || !period) {
       return res.status(400).send({ message: "all field are required! " });
     }
     const newData = await SocketData.create(req.body);

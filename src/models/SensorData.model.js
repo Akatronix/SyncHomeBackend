@@ -10,6 +10,6 @@ const sensorSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const SensorData = mongoose.model("EMsensor", sensorSchema);
+const SensorData = mongoose.model("sensor", sensorSchema);
 
 module.exports = SensorData;
